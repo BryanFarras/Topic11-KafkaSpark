@@ -362,5 +362,4 @@ Topic11-KafkaSpark/
 2. **Apache Spark Structured Streaming Programming Guide**: *Event-Time Watermarks, Windowing, and Fault-Tolerance Semantics*. https://spark.apache.org/docs/4.2.0/structured-streaming-programming-guide.html
 3. **NASA FIRMS (Fire Information for Resource Management System)**: *VIIRS 375m Active Fire / Hotspot Data Products*. https://firms.modaps.eosdis.nasa.gov/
 4. **Panduan Praktikum Big Data Topic 11**: *Mini Pipeline Ingestion (Kafka + Spark Structured Streaming)*, Departemen Ilmu Komputer, Universitas Indonesia, Oktober 2026.
-#   T o p i c 1 1 - K a f k a S p a r k  
- 
+#
