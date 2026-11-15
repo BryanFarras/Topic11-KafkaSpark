@@ -1,0 +1,4077 @@
+{
+  "generated_at": "2026-11-12T18:21:52.590649+00:00",
+  "configuration": {
+    "rates_tested": [
+      100,
+      1000,
+      10000
+    ],
+    "duration_per_tier_seconds": 15,
+    "poll_interval_seconds": 2,
+    "kafka_broker": "localhost:9092",
+    "topic": "klik",
+    "kafka_partitions": 3,
+    "watermark": "2 minutes",
+    "window": "1 minute"
+  },
+  "results": [
+    {
+      "rate_target": 100,
+      "label": "100 per detik",
+      "duration_sec": 15,
+      "producer_sent": 1500,
+      "producer_effective_rate": 100.0,
+      "total_rows_processed": 1500,
+      "mean_input_rows_per_second": 109.9,
+      "mean_processed_rows_per_second": 101.8,
+      "is_lagging": false,
+      "tertinggal": "Tidak",
+      "catatan": "Laju stabil, Spark memproses jauh melampaui laju kedatangan (headroom > 10x), latensi rendah (<300ms)",
+      "sample_batches_count": 64,
+      "batches": [
+        {
+          "batch_id": 1,
+          "num_input_rows": 10,
+          "input_rows_per_second": 769.2,
+          "processed_rows_per_second": 9.8,
+          "duration_ms": {
+            "addBatch": 922,
+            "commitOffsets": 32,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 41,
+            "triggerExecution": 1024,
+            "walCommit": 23
+          },
+          "timestamp": "2026-11-12T18:20:48.182Z"
+        },
+        {
+          "batch_id": 2,
+          "num_input_rows": 100,
+          "input_rows_per_second": 97.5,
+          "processed_rows_per_second": 222.2,
+          "duration_ms": {
+            "addBatch": 341,
+            "commitOffsets": 27,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 44,
+            "triggerExecution": 449,
+            "walCommit": 27
+          },
+          "timestamp": "2026-11-12T18:20:49.208Z"
+        },
+        {
+          "batch_id": 3,
+          "num_input_rows": 40,
+          "input_rows_per_second": 88.7,
+          "processed_rows_per_second": 117.3,
+          "duration_ms": {
+            "addBatch": 245,
+            "commitOffsets": 26,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 38,
+            "triggerExecution": 340,
+            "walCommit": 25
+          },
+          "timestamp": "2026-11-12T18:20:49.659Z"
+        },
+        {
+          "batch_id": 4,
+          "num_input_rows": 40,
+          "input_rows_per_second": 116.6,
+          "processed_rows_per_second": 127.0,
+          "duration_ms": {
+            "addBatch": 199,
+            "commitOffsets": 43,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 40,
+            "triggerExecution": 315,
+            "walCommit": 29
+          },
+          "timestamp": "2026-11-12T18:20:50.002Z"
+        },
+        {
+          "batch_id": 5,
+          "num_input_rows": 30,
+          "input_rows_per_second": 94.6,
+          "processed_rows_per_second": 107.5,
+          "duration_ms": {
+            "addBatch": 191,
+            "commitOffsets": 29,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 28,
+            "triggerExecution": 279,
+            "walCommit": 26
+          },
+          "timestamp": "2026-11-12T18:20:50.319Z"
+        },
+        {
+          "batch_id": 6,
+          "num_input_rows": 30,
+          "input_rows_per_second": 107.1,
+          "processed_rows_per_second": 91.7,
+          "duration_ms": {
+            "addBatch": 241,
+            "commitOffsets": 25,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 25,
+            "triggerExecution": 327,
+            "walCommit": 31
+          },
+          "timestamp": "2026-11-12T18:20:50.599Z"
+        },
+        {
+          "batch_id": 7,
+          "num_input_rows": 30,
+          "input_rows_per_second": 91.5,
+          "processed_rows_per_second": 114.5,
+          "duration_ms": {
+            "addBatch": 186,
+            "commitOffsets": 25,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 24,
+            "triggerExecution": 262,
+            "walCommit": 23
+          },
+          "timestamp": "2026-11-12T18:20:50.927Z"
+        },
+        {
+          "batch_id": 8,
+          "num_input_rows": 30,
+          "input_rows_per_second": 114.1,
+          "processed_rows_per_second": 96.5,
+          "duration_ms": {
+            "addBatch": 230,
+            "commitOffsets": 29,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 23,
+            "triggerExecution": 311,
+            "walCommit": 24
+          },
+          "timestamp": "2026-11-12T18:20:51.190Z"
+        },
+        {
+          "batch_id": 9,
+          "num_input_rows": 30,
+          "input_rows_per_second": 96.2,
+          "processed_rows_per_second": 109.5,
+          "duration_ms": {
+            "addBatch": 199,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 25,
+            "triggerExecution": 274,
+            "walCommit": 23
+          },
+          "timestamp": "2026-11-12T18:20:51.502Z"
+        },
+        {
+          "batch_id": 10,
+          "num_input_rows": 25,
+          "input_rows_per_second": 90.9,
+          "processed_rows_per_second": 78.4,
+          "duration_ms": {
+            "addBatch": 238,
+            "commitOffsets": 34,
+            "getBatch": 1,
+            "latestOffset": 4,
+            "queryPlanning": 20,
+            "triggerExecution": 319,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:20:51.777Z"
+        },
+        {
+          "batch_id": 11,
+          "num_input_rows": 35,
+          "input_rows_per_second": 108.7,
+          "processed_rows_per_second": 122.4,
+          "duration_ms": {
+            "addBatch": 218,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 20,
+            "triggerExecution": 285,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:20:52.099Z"
+        },
+        {
+          "batch_id": 12,
+          "num_input_rows": 30,
+          "input_rows_per_second": 104.5,
+          "processed_rows_per_second": 105.3,
+          "duration_ms": {
+            "addBatch": 217,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 22,
+            "triggerExecution": 285,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:20:52.386Z"
+        },
+        {
+          "batch_id": 13,
+          "num_input_rows": 20,
+          "input_rows_per_second": 69.7,
+          "processed_rows_per_second": 94.8,
+          "duration_ms": {
+            "addBatch": 144,
+            "commitOffsets": 23,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 16,
+            "triggerExecution": 211,
+            "walCommit": 23
+          },
+          "timestamp": "2026-11-12T18:20:52.673Z"
+        },
+        {
+          "batch_id": 14,
+          "num_input_rows": 30,
+          "input_rows_per_second": 141.5,
+          "processed_rows_per_second": 100.7,
+          "duration_ms": {
+            "addBatch": 229,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 20,
+            "triggerExecution": 298,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:20:52.885Z"
+        },
+        {
+          "batch_id": 15,
+          "num_input_rows": 30,
+          "input_rows_per_second": 100.3,
+          "processed_rows_per_second": 106.0,
+          "duration_ms": {
+            "addBatch": 199,
+            "commitOffsets": 24,
+            "getBatch": 1,
+            "latestOffset": 3,
+            "queryPlanning": 18,
+            "triggerExecution": 283,
+            "walCommit": 36
+          },
+          "timestamp": "2026-11-12T18:20:53.184Z"
+        },
+        {
+          "batch_id": 16,
+          "num_input_rows": 20,
+          "input_rows_per_second": 70.4,
+          "processed_rows_per_second": 102.6,
+          "duration_ms": {
+            "addBatch": 131,
+            "commitOffsets": 21,
+            "getBatch": 1,
+            "latestOffset": 3,
+            "queryPlanning": 16,
+            "triggerExecution": 195,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:20:53.468Z"
+        },
+        {
+          "batch_id": 17,
+          "num_input_rows": 20,
+          "input_rows_per_second": 102.0,
+          "processed_rows_per_second": 97.1,
+          "duration_ms": {
+            "addBatch": 134,
+            "commitOffsets": 24,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 19,
+            "triggerExecution": 206,
+            "walCommit": 23
+          },
+          "timestamp": "2026-11-12T18:20:53.664Z"
+        },
+        {
+          "batch_id": 18,
+          "num_input_rows": 20,
+          "input_rows_per_second": 96.6,
+          "processed_rows_per_second": 93.0,
+          "duration_ms": {
+            "addBatch": 147,
+            "commitOffsets": 23,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 15,
+            "triggerExecution": 215,
+            "walCommit": 25
+          },
+          "timestamp": "2026-11-12T18:20:53.871Z"
+        },
+        {
+          "batch_id": 19,
+          "num_input_rows": 30,
+          "input_rows_per_second": 138.9,
+          "processed_rows_per_second": 107.9,
+          "duration_ms": {
+            "addBatch": 207,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 21,
+            "triggerExecution": 278,
+            "walCommit": 26
+          },
+          "timestamp": "2026-11-12T18:20:54.087Z"
+        },
+        {
+          "batch_id": 20,
+          "num_input_rows": 20,
+          "input_rows_per_second": 71.7,
+          "processed_rows_per_second": 106.4,
+          "duration_ms": {
+            "addBatch": 128,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 15,
+            "triggerExecution": 188,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:20:54.366Z"
+        },
+        {
+          "batch_id": 21,
+          "num_input_rows": 20,
+          "input_rows_per_second": 105.8,
+          "processed_rows_per_second": 90.1,
+          "duration_ms": {
+            "addBatch": 155,
+            "commitOffsets": 21,
+            "getBatch": 1,
+            "latestOffset": 3,
+            "queryPlanning": 18,
+            "triggerExecution": 221,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:20:54.555Z"
+        },
+        {
+          "batch_id": 22,
+          "num_input_rows": 30,
+          "input_rows_per_second": 134.5,
+          "processed_rows_per_second": 154.6,
+          "duration_ms": {
+            "addBatch": 131,
+            "commitOffsets": 23,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 14,
+            "triggerExecution": 194,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:20:54.778Z"
+        },
+        {
+          "batch_id": 23,
+          "num_input_rows": 10,
+          "input_rows_per_second": 51.3,
+          "processed_rows_per_second": 50.5,
+          "duration_ms": {
+            "addBatch": 126,
+            "commitOffsets": 27,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 17,
+            "triggerExecution": 198,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:20:54.973Z"
+        },
+        {
+          "batch_id": 24,
+          "num_input_rows": 20,
+          "input_rows_per_second": 100.5,
+          "processed_rows_per_second": 68.3,
+          "duration_ms": {
+            "addBatch": 223,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 18,
+            "triggerExecution": 293,
+            "walCommit": 26
+          },
+          "timestamp": "2026-11-12T18:20:55.172Z"
+        },
+        {
+          "batch_id": 25,
+          "num_input_rows": 30,
+          "input_rows_per_second": 102.0,
+          "processed_rows_per_second": 136.4,
+          "duration_ms": {
+            "addBatch": 146,
+            "commitOffsets": 31,
+            "getBatch": 1,
+            "latestOffset": 3,
+            "queryPlanning": 18,
+            "triggerExecution": 220,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:20:55.466Z"
+        },
+        {
+          "batch_id": 26,
+          "num_input_rows": 30,
+          "input_rows_per_second": 135.1,
+          "processed_rows_per_second": 102.0,
+          "duration_ms": {
+            "addBatch": 210,
+            "commitOffsets": 24,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 15,
+            "triggerExecution": 294,
+            "walCommit": 40
+          },
+          "timestamp": "2026-11-12T18:20:55.688Z"
+        },
+        {
+          "batch_id": 27,
+          "num_input_rows": 30,
+          "input_rows_per_second": 101.7,
+          "processed_rows_per_second": 103.4,
+          "duration_ms": {
+            "addBatch": 219,
+            "commitOffsets": 34,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 13,
+            "triggerExecution": 289,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:20:55.983Z"
+        },
+        {
+          "batch_id": 28,
+          "num_input_rows": 20,
+          "input_rows_per_second": 68.7,
+          "processed_rows_per_second": 108.7,
+          "duration_ms": {
+            "addBatch": 121,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 16,
+            "triggerExecution": 184,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:20:56.274Z"
+        },
+        {
+          "batch_id": 29,
+          "num_input_rows": 20,
+          "input_rows_per_second": 107.5,
+          "processed_rows_per_second": 96.6,
+          "duration_ms": {
+            "addBatch": 150,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 11,
+            "triggerExecution": 207,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:20:56.460Z"
+        },
+        {
+          "batch_id": 30,
+          "num_input_rows": 20,
+          "input_rows_per_second": 96.2,
+          "processed_rows_per_second": 111.7,
+          "duration_ms": {
+            "addBatch": 120,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 14,
+            "triggerExecution": 179,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:20:56.668Z"
+        },
+        {
+          "batch_id": 31,
+          "num_input_rows": 20,
+          "input_rows_per_second": 111.1,
+          "processed_rows_per_second": 92.2,
+          "duration_ms": {
+            "addBatch": 145,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 16,
+            "triggerExecution": 217,
+            "walCommit": 32
+          },
+          "timestamp": "2026-11-12T18:20:56.848Z"
+        },
+        {
+          "batch_id": 32,
+          "num_input_rows": 20,
+          "input_rows_per_second": 91.7,
+          "processed_rows_per_second": 107.5,
+          "duration_ms": {
+            "addBatch": 131,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 11,
+            "triggerExecution": 186,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:20:57.066Z"
+        },
+        {
+          "batch_id": 33,
+          "num_input_rows": 20,
+          "input_rows_per_second": 107.0,
+          "processed_rows_per_second": 97.6,
+          "duration_ms": {
+            "addBatch": 146,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 11,
+            "triggerExecution": 205,
+            "walCommit": 23
+          },
+          "timestamp": "2026-11-12T18:20:57.253Z"
+        },
+        {
+          "batch_id": 34,
+          "num_input_rows": 20,
+          "input_rows_per_second": 97.1,
+          "processed_rows_per_second": 122.0,
+          "duration_ms": {
+            "addBatch": 108,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 11,
+            "triggerExecution": 164,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:20:57.459Z"
+        },
+        {
+          "batch_id": 35,
+          "num_input_rows": 20,
+          "input_rows_per_second": 121.2,
+          "processed_rows_per_second": 84.4,
+          "duration_ms": {
+            "addBatch": 180,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 11,
+            "triggerExecution": 237,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:20:57.624Z"
+        },
+        {
+          "batch_id": 36,
+          "num_input_rows": 20,
+          "input_rows_per_second": 84.0,
+          "processed_rows_per_second": 108.7,
+          "duration_ms": {
+            "addBatch": 119,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 16,
+            "triggerExecution": 184,
+            "walCommit": 24
+          },
+          "timestamp": "2026-11-12T18:20:57.862Z"
+        },
+        {
+          "batch_id": 37,
+          "num_input_rows": 20,
+          "input_rows_per_second": 108.1,
+          "processed_rows_per_second": 87.7,
+          "duration_ms": {
+            "addBatch": 170,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 11,
+            "triggerExecution": 228,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:20:58.047Z"
+        },
+        {
+          "batch_id": 38,
+          "num_input_rows": 20,
+          "input_rows_per_second": 87.3,
+          "processed_rows_per_second": 114.3,
+          "duration_ms": {
+            "addBatch": 117,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 12,
+            "triggerExecution": 175,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:20:58.276Z"
+        },
+        {
+          "batch_id": 39,
+          "num_input_rows": 20,
+          "input_rows_per_second": 113.6,
+          "processed_rows_per_second": 96.2,
+          "duration_ms": {
+            "addBatch": 152,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 11,
+            "triggerExecution": 208,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:20:58.452Z"
+        },
+        {
+          "batch_id": 40,
+          "num_input_rows": 20,
+          "input_rows_per_second": 95.7,
+          "processed_rows_per_second": 126.6,
+          "duration_ms": {
+            "addBatch": 100,
+            "commitOffsets": 23,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 11,
+            "triggerExecution": 158,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:20:58.661Z"
+        },
+        {
+          "batch_id": 41,
+          "num_input_rows": 20,
+          "input_rows_per_second": 125.8,
+          "processed_rows_per_second": 79.7,
+          "duration_ms": {
+            "addBatch": 192,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 13,
+            "triggerExecution": 251,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:20:58.820Z"
+        },
+        {
+          "batch_id": 42,
+          "num_input_rows": 20,
+          "input_rows_per_second": 79.4,
+          "processed_rows_per_second": 89.7,
+          "duration_ms": {
+            "addBatch": 147,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 14,
+            "triggerExecution": 222,
+            "walCommit": 35
+          },
+          "timestamp": "2026-11-12T18:20:59.072Z"
+        },
+        {
+          "batch_id": 43,
+          "num_input_rows": 30,
+          "input_rows_per_second": 133.9,
+          "processed_rows_per_second": 176.5,
+          "duration_ms": {
+            "addBatch": 112,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 12,
+            "triggerExecution": 170,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:20:59.296Z"
+        },
+        {
+          "batch_id": 44,
+          "num_input_rows": 10,
+          "input_rows_per_second": 58.5,
+          "processed_rows_per_second": 55.9,
+          "duration_ms": {
+            "addBatch": 114,
+            "commitOffsets": 23,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 12,
+            "triggerExecution": 179,
+            "walCommit": 25
+          },
+          "timestamp": "2026-11-12T18:20:59.467Z"
+        },
+        {
+          "batch_id": 45,
+          "num_input_rows": 20,
+          "input_rows_per_second": 111.1,
+          "processed_rows_per_second": 93.9,
+          "duration_ms": {
+            "addBatch": 155,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 10,
+            "triggerExecution": 213,
+            "walCommit": 23
+          },
+          "timestamp": "2026-11-12T18:20:59.647Z"
+        },
+        {
+          "batch_id": 46,
+          "num_input_rows": 20,
+          "input_rows_per_second": 93.5,
+          "processed_rows_per_second": 115.6,
+          "duration_ms": {
+            "addBatch": 117,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 9,
+            "triggerExecution": 173,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:20:59.861Z"
+        },
+        {
+          "batch_id": 47,
+          "num_input_rows": 20,
+          "input_rows_per_second": 114.9,
+          "processed_rows_per_second": 90.1,
+          "duration_ms": {
+            "addBatch": 166,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 11,
+            "triggerExecution": 222,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:00.035Z"
+        },
+        {
+          "batch_id": 48,
+          "num_input_rows": 20,
+          "input_rows_per_second": 89.7,
+          "processed_rows_per_second": 125.0,
+          "duration_ms": {
+            "addBatch": 105,
+            "commitOffsets": 18,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 10,
+            "triggerExecution": 160,
+            "walCommit": 23
+          },
+          "timestamp": "2026-11-12T18:21:00.258Z"
+        },
+        {
+          "batch_id": 49,
+          "num_input_rows": 20,
+          "input_rows_per_second": 125.0,
+          "processed_rows_per_second": 82.3,
+          "duration_ms": {
+            "addBatch": 190,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 9,
+            "triggerExecution": 243,
+            "walCommit": 18
+          },
+          "timestamp": "2026-11-12T18:21:00.418Z"
+        },
+        {
+          "batch_id": 50,
+          "num_input_rows": 20,
+          "input_rows_per_second": 82.0,
+          "processed_rows_per_second": 114.3,
+          "duration_ms": {
+            "addBatch": 119,
+            "commitOffsets": 23,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 9,
+            "triggerExecution": 175,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:00.662Z"
+        },
+        {
+          "batch_id": 51,
+          "num_input_rows": 20,
+          "input_rows_per_second": 111.1,
+          "processed_rows_per_second": 83.3,
+          "duration_ms": {
+            "addBatch": 177,
+            "commitOffsets": 21,
+            "getBatch": 1,
+            "latestOffset": 3,
+            "queryPlanning": 13,
+            "triggerExecution": 240,
+            "walCommit": 23
+          },
+          "timestamp": "2026-11-12T18:21:00.842Z"
+        },
+        {
+          "batch_id": 52,
+          "num_input_rows": 30,
+          "input_rows_per_second": 124.5,
+          "processed_rows_per_second": 171.4,
+          "duration_ms": {
+            "addBatch": 122,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 9,
+            "triggerExecution": 175,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:01.083Z"
+        },
+        {
+          "batch_id": 53,
+          "num_input_rows": 10,
+          "input_rows_per_second": 56.8,
+          "processed_rows_per_second": 63.7,
+          "duration_ms": {
+            "addBatch": 100,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 11,
+            "triggerExecution": 157,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:01.259Z"
+        },
+        {
+          "batch_id": 54,
+          "num_input_rows": 20,
+          "input_rows_per_second": 126.6,
+          "processed_rows_per_second": 75.2,
+          "duration_ms": {
+            "addBatch": 214,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 10,
+            "triggerExecution": 266,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:01.417Z"
+        },
+        {
+          "batch_id": 55,
+          "num_input_rows": 30,
+          "input_rows_per_second": 112.4,
+          "processed_rows_per_second": 179.6,
+          "duration_ms": {
+            "addBatch": 114,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 9,
+            "triggerExecution": 166,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:01.684Z"
+        },
+        {
+          "batch_id": 56,
+          "num_input_rows": 10,
+          "input_rows_per_second": 59.9,
+          "processed_rows_per_second": 71.9,
+          "duration_ms": {
+            "addBatch": 88,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 10,
+            "triggerExecution": 139,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:01.851Z"
+        },
+        {
+          "batch_id": 57,
+          "num_input_rows": 20,
+          "input_rows_per_second": 142.9,
+          "processed_rows_per_second": 125.8,
+          "duration_ms": {
+            "addBatch": 109,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 9,
+            "triggerExecution": 159,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:01.991Z"
+        },
+        {
+          "batch_id": 58,
+          "num_input_rows": 10,
+          "input_rows_per_second": 62.5,
+          "processed_rows_per_second": 67.1,
+          "duration_ms": {
+            "addBatch": 98,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 9,
+            "triggerExecution": 149,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:02.151Z"
+        },
+        {
+          "batch_id": 59,
+          "num_input_rows": 20,
+          "input_rows_per_second": 133.3,
+          "processed_rows_per_second": 119.8,
+          "duration_ms": {
+            "addBatch": 116,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 9,
+            "triggerExecution": 167,
+            "walCommit": 18
+          },
+          "timestamp": "2026-11-12T18:21:02.301Z"
+        },
+        {
+          "batch_id": 60,
+          "num_input_rows": 10,
+          "input_rows_per_second": 59.5,
+          "processed_rows_per_second": 59.9,
+          "duration_ms": {
+            "addBatch": 110,
+            "commitOffsets": 21,
+            "getBatch": 1,
+            "latestOffset": 3,
+            "queryPlanning": 10,
+            "triggerExecution": 167,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:02.469Z"
+        },
+        {
+          "batch_id": 61,
+          "num_input_rows": 20,
+          "input_rows_per_second": 119.0,
+          "processed_rows_per_second": 85.5,
+          "duration_ms": {
+            "addBatch": 169,
+            "commitOffsets": 30,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 10,
+            "triggerExecution": 234,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:02.637Z"
+        },
+        {
+          "batch_id": 62,
+          "num_input_rows": 20,
+          "input_rows_per_second": 85.1,
+          "processed_rows_per_second": 122.0,
+          "duration_ms": {
+            "addBatch": 105,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 12,
+            "triggerExecution": 164,
+            "walCommit": 24
+          },
+          "timestamp": "2026-11-12T18:21:02.872Z"
+        },
+        {
+          "batch_id": 63,
+          "num_input_rows": 20,
+          "input_rows_per_second": 121.2,
+          "processed_rows_per_second": 30.6,
+          "duration_ms": {
+            "addBatch": 596,
+            "commitOffsets": 18,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 14,
+            "triggerExecution": 652,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:03.037Z"
+        },
+        {
+          "batch_id": 64,
+          "num_input_rows": 10,
+          "input_rows_per_second": 15.3,
+          "processed_rows_per_second": 64.5,
+          "duration_ms": {
+            "addBatch": 108,
+            "commitOffsets": 18,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 155,
+            "walCommit": 17
+          },
+          "timestamp": "2026-11-12T18:21:03.691Z"
+        }
+      ]
+    },
+    {
+      "rate_target": 1000,
+      "label": "1.000 per detik",
+      "duration_sec": 15,
+      "producer_sent": 15000,
+      "producer_effective_rate": 1000.0,
+      "total_rows_processed": 15000,
+      "mean_input_rows_per_second": 1096.6,
+      "mean_processed_rows_per_second": 1016.3,
+      "is_lagging": false,
+      "tertinggal": "Tidak",
+      "catatan": "Throughput terjaga, micro-batch memproses 200-500 baris, tanpa penumpukan antrean di Kafka",
+      "sample_batches_count": 84,
+      "batches": [
+        {
+          "batch_id": 66,
+          "num_input_rows": 100,
+          "input_rows_per_second": 7142.9,
+          "processed_rows_per_second": 518.1,
+          "duration_ms": {
+            "addBatch": 124,
+            "commitOffsets": 31,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 11,
+            "triggerExecution": 193,
+            "walCommit": 24
+          },
+          "timestamp": "2026-11-12T18:21:09.406Z"
+        },
+        {
+          "batch_id": 67,
+          "num_input_rows": 100,
+          "input_rows_per_second": 515.5,
+          "processed_rows_per_second": 537.6,
+          "duration_ms": {
+            "addBatch": 119,
+            "commitOffsets": 29,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 9,
+            "triggerExecution": 186,
+            "walCommit": 26
+          },
+          "timestamp": "2026-11-12T18:21:09.600Z"
+        },
+        {
+          "batch_id": 68,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1069.5,
+          "processed_rows_per_second": 995.0,
+          "duration_ms": {
+            "addBatch": 135,
+            "commitOffsets": 27,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 9,
+            "triggerExecution": 200,
+            "walCommit": 26
+          },
+          "timestamp": "2026-11-12T18:21:09.787Z"
+        },
+        {
+          "batch_id": 69,
+          "num_input_rows": 200,
+          "input_rows_per_second": 995.0,
+          "processed_rows_per_second": 1025.6,
+          "duration_ms": {
+            "addBatch": 126,
+            "commitOffsets": 27,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 10,
+            "triggerExecution": 195,
+            "walCommit": 28
+          },
+          "timestamp": "2026-11-12T18:21:09.988Z"
+        },
+        {
+          "batch_id": 70,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1020.4,
+          "processed_rows_per_second": 990.1,
+          "duration_ms": {
+            "addBatch": 132,
+            "commitOffsets": 30,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 10,
+            "triggerExecution": 202,
+            "walCommit": 26
+          },
+          "timestamp": "2026-11-12T18:21:10.184Z"
+        },
+        {
+          "batch_id": 71,
+          "num_input_rows": 200,
+          "input_rows_per_second": 985.2,
+          "processed_rows_per_second": 1333.3,
+          "duration_ms": {
+            "addBatch": 95,
+            "commitOffsets": 23,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 9,
+            "triggerExecution": 150,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:10.387Z"
+        },
+        {
+          "batch_id": 72,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1324.5,
+          "processed_rows_per_second": 694.4,
+          "duration_ms": {
+            "addBatch": 214,
+            "commitOffsets": 37,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 9,
+            "triggerExecution": 288,
+            "walCommit": 25
+          },
+          "timestamp": "2026-11-12T18:21:10.538Z"
+        },
+        {
+          "batch_id": 73,
+          "num_input_rows": 300,
+          "input_rows_per_second": 1038.1,
+          "processed_rows_per_second": 1214.6,
+          "duration_ms": {
+            "addBatch": 182,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 10,
+            "triggerExecution": 247,
+            "walCommit": 31
+          },
+          "timestamp": "2026-11-12T18:21:10.827Z"
+        },
+        {
+          "batch_id": 74,
+          "num_input_rows": 200,
+          "input_rows_per_second": 806.5,
+          "processed_rows_per_second": 1333.3,
+          "duration_ms": {
+            "addBatch": 96,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 10,
+            "triggerExecution": 150,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:11.075Z"
+        },
+        {
+          "batch_id": 75,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1324.5,
+          "processed_rows_per_second": 757.6,
+          "duration_ms": {
+            "addBatch": 204,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 9,
+            "triggerExecution": 264,
+            "walCommit": 25
+          },
+          "timestamp": "2026-11-12T18:21:11.226Z"
+        },
+        {
+          "batch_id": 76,
+          "num_input_rows": 200,
+          "input_rows_per_second": 754.7,
+          "processed_rows_per_second": 1234.6,
+          "duration_ms": {
+            "addBatch": 103,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 12,
+            "triggerExecution": 162,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:11.491Z"
+        },
+        {
+          "batch_id": 77,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1227.0,
+          "processed_rows_per_second": 858.4,
+          "duration_ms": {
+            "addBatch": 165,
+            "commitOffsets": 34,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 10,
+            "triggerExecution": 232,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:11.654Z"
+        },
+        {
+          "batch_id": 78,
+          "num_input_rows": 200,
+          "input_rows_per_second": 858.4,
+          "processed_rows_per_second": 1324.5,
+          "duration_ms": {
+            "addBatch": 97,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 10,
+            "triggerExecution": 151,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:11.887Z"
+        },
+        {
+          "batch_id": 79,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1315.8,
+          "processed_rows_per_second": 854.7,
+          "duration_ms": {
+            "addBatch": 182,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 9,
+            "triggerExecution": 234,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:12.039Z"
+        },
+        {
+          "batch_id": 80,
+          "num_input_rows": 200,
+          "input_rows_per_second": 851.1,
+          "processed_rows_per_second": 1388.9,
+          "duration_ms": {
+            "addBatch": 94,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 144,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:12.274Z"
+        },
+        {
+          "batch_id": 81,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1379.3,
+          "processed_rows_per_second": 1234.6,
+          "duration_ms": {
+            "addBatch": 107,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 9,
+            "triggerExecution": 162,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:12.419Z"
+        },
+        {
+          "batch_id": 82,
+          "num_input_rows": 100,
+          "input_rows_per_second": 613.5,
+          "processed_rows_per_second": 628.9,
+          "duration_ms": {
+            "addBatch": 106,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 9,
+            "triggerExecution": 159,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:12.582Z"
+        },
+        {
+          "batch_id": 83,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1250.0,
+          "processed_rows_per_second": 858.4,
+          "duration_ms": {
+            "addBatch": 181,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 233,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:12.742Z"
+        },
+        {
+          "batch_id": 84,
+          "num_input_rows": 200,
+          "input_rows_per_second": 854.7,
+          "processed_rows_per_second": 1351.4,
+          "duration_ms": {
+            "addBatch": 91,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 13,
+            "triggerExecution": 148,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:12.976Z"
+        },
+        {
+          "batch_id": 85,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1342.3,
+          "processed_rows_per_second": 775.2,
+          "duration_ms": {
+            "addBatch": 198,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 17,
+            "triggerExecution": 258,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:13.125Z"
+        },
+        {
+          "batch_id": 86,
+          "num_input_rows": 200,
+          "input_rows_per_second": 772.2,
+          "processed_rows_per_second": 1111.1,
+          "duration_ms": {
+            "addBatch": 124,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 9,
+            "triggerExecution": 179,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:13.384Z"
+        },
+        {
+          "batch_id": 87,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1105.0,
+          "processed_rows_per_second": 896.9,
+          "duration_ms": {
+            "addBatch": 167,
+            "commitOffsets": 24,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 9,
+            "triggerExecution": 223,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:13.565Z"
+        },
+        {
+          "batch_id": 88,
+          "num_input_rows": 200,
+          "input_rows_per_second": 892.9,
+          "processed_rows_per_second": 1369.9,
+          "duration_ms": {
+            "addBatch": 94,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 9,
+            "triggerExecution": 146,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:13.789Z"
+        },
+        {
+          "batch_id": 89,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1360.5,
+          "processed_rows_per_second": 778.2,
+          "duration_ms": {
+            "addBatch": 198,
+            "commitOffsets": 25,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 9,
+            "triggerExecution": 256,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:13.936Z"
+        },
+        {
+          "batch_id": 90,
+          "num_input_rows": 200,
+          "input_rows_per_second": 778.2,
+          "processed_rows_per_second": 1333.3,
+          "duration_ms": {
+            "addBatch": 93,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 9,
+            "triggerExecution": 150,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:14.193Z"
+        },
+        {
+          "batch_id": 91,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1324.5,
+          "processed_rows_per_second": 854.7,
+          "duration_ms": {
+            "addBatch": 182,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 9,
+            "triggerExecution": 234,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:14.344Z"
+        },
+        {
+          "batch_id": 92,
+          "num_input_rows": 200,
+          "input_rows_per_second": 851.1,
+          "processed_rows_per_second": 1242.2,
+          "duration_ms": {
+            "addBatch": 108,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 161,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:14.579Z"
+        },
+        {
+          "batch_id": 93,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1234.6,
+          "processed_rows_per_second": 862.1,
+          "duration_ms": {
+            "addBatch": 180,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 232,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:14.741Z"
+        },
+        {
+          "batch_id": 94,
+          "num_input_rows": 200,
+          "input_rows_per_second": 862.1,
+          "processed_rows_per_second": 1265.8,
+          "duration_ms": {
+            "addBatch": 98,
+            "commitOffsets": 25,
+            "getBatch": 1,
+            "latestOffset": 3,
+            "queryPlanning": 10,
+            "triggerExecution": 157,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:14.973Z"
+        },
+        {
+          "batch_id": 95,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1265.8,
+          "processed_rows_per_second": 803.2,
+          "duration_ms": {
+            "addBatch": 184,
+            "commitOffsets": 25,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 11,
+            "triggerExecution": 249,
+            "walCommit": 24
+          },
+          "timestamp": "2026-11-12T18:21:15.131Z"
+        },
+        {
+          "batch_id": 96,
+          "num_input_rows": 200,
+          "input_rows_per_second": 800.0,
+          "processed_rows_per_second": 1298.7,
+          "duration_ms": {
+            "addBatch": 97,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 10,
+            "triggerExecution": 154,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:15.381Z"
+        },
+        {
+          "batch_id": 97,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1290.3,
+          "processed_rows_per_second": 829.9,
+          "duration_ms": {
+            "addBatch": 180,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 9,
+            "triggerExecution": 241,
+            "walCommit": 24
+          },
+          "timestamp": "2026-11-12T18:21:15.536Z"
+        },
+        {
+          "batch_id": 98,
+          "num_input_rows": 200,
+          "input_rows_per_second": 826.4,
+          "processed_rows_per_second": 1212.1,
+          "duration_ms": {
+            "addBatch": 109,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 5,
+            "queryPlanning": 8,
+            "triggerExecution": 165,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:15.778Z"
+        },
+        {
+          "batch_id": 99,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1212.1,
+          "processed_rows_per_second": 865.8,
+          "duration_ms": {
+            "addBatch": 175,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 4,
+            "queryPlanning": 9,
+            "triggerExecution": 231,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:15.943Z"
+        },
+        {
+          "batch_id": 100,
+          "num_input_rows": 200,
+          "input_rows_per_second": 862.1,
+          "processed_rows_per_second": 1360.5,
+          "duration_ms": {
+            "addBatch": 92,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 147,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:16.175Z"
+        },
+        {
+          "batch_id": 101,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1360.5,
+          "processed_rows_per_second": 1307.2,
+          "duration_ms": {
+            "addBatch": 101,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 152,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:16.322Z"
+        },
+        {
+          "batch_id": 102,
+          "num_input_rows": 100,
+          "input_rows_per_second": 653.6,
+          "processed_rows_per_second": 666.7,
+          "duration_ms": {
+            "addBatch": 84,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 11,
+            "queryPlanning": 11,
+            "triggerExecution": 149,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:16.475Z"
+        },
+        {
+          "batch_id": 103,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1333.3,
+          "processed_rows_per_second": 763.4,
+          "duration_ms": {
+            "addBatch": 196,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 9,
+            "triggerExecution": 262,
+            "walCommit": 31
+          },
+          "timestamp": "2026-11-12T18:21:16.625Z"
+        },
+        {
+          "batch_id": 104,
+          "num_input_rows": 200,
+          "input_rows_per_second": 763.4,
+          "processed_rows_per_second": 1257.9,
+          "duration_ms": {
+            "addBatch": 102,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 159,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:16.887Z"
+        },
+        {
+          "batch_id": 105,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1257.9,
+          "processed_rows_per_second": 833.3,
+          "duration_ms": {
+            "addBatch": 187,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 240,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:17.046Z"
+        },
+        {
+          "batch_id": 106,
+          "num_input_rows": 200,
+          "input_rows_per_second": 829.9,
+          "processed_rows_per_second": 1369.9,
+          "duration_ms": {
+            "addBatch": 89,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 146,
+            "walCommit": 23
+          },
+          "timestamp": "2026-11-12T18:21:17.287Z"
+        },
+        {
+          "batch_id": 107,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1360.5,
+          "processed_rows_per_second": 833.3,
+          "duration_ms": {
+            "addBatch": 185,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 10,
+            "triggerExecution": 240,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:17.434Z"
+        },
+        {
+          "batch_id": 108,
+          "num_input_rows": 200,
+          "input_rows_per_second": 829.9,
+          "processed_rows_per_second": 1449.3,
+          "duration_ms": {
+            "addBatch": 84,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 138,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:17.675Z"
+        },
+        {
+          "batch_id": 109,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1438.8,
+          "processed_rows_per_second": 1242.2,
+          "duration_ms": {
+            "addBatch": 103,
+            "commitOffsets": 21,
+            "getBatch": 1,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 160,
+            "walCommit": 24
+          },
+          "timestamp": "2026-11-12T18:21:17.814Z"
+        },
+        {
+          "batch_id": 110,
+          "num_input_rows": 100,
+          "input_rows_per_second": 621.1,
+          "processed_rows_per_second": 584.8,
+          "duration_ms": {
+            "addBatch": 116,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 170,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:17.975Z"
+        },
+        {
+          "batch_id": 111,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1169.6,
+          "processed_rows_per_second": 885.0,
+          "duration_ms": {
+            "addBatch": 173,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 226,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:18.146Z"
+        },
+        {
+          "batch_id": 112,
+          "num_input_rows": 200,
+          "input_rows_per_second": 881.1,
+          "processed_rows_per_second": 1315.8,
+          "duration_ms": {
+            "addBatch": 100,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 152,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:18.373Z"
+        },
+        {
+          "batch_id": 113,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1307.2,
+          "processed_rows_per_second": 1379.3,
+          "duration_ms": {
+            "addBatch": 95,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 145,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:18.526Z"
+        },
+        {
+          "batch_id": 114,
+          "num_input_rows": 100,
+          "input_rows_per_second": 684.9,
+          "processed_rows_per_second": 740.7,
+          "duration_ms": {
+            "addBatch": 83,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 135,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:18.672Z"
+        },
+        {
+          "batch_id": 115,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1470.6,
+          "processed_rows_per_second": 1204.8,
+          "duration_ms": {
+            "addBatch": 115,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 166,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:18.808Z"
+        },
+        {
+          "batch_id": 116,
+          "num_input_rows": 100,
+          "input_rows_per_second": 598.8,
+          "processed_rows_per_second": 675.7,
+          "duration_ms": {
+            "addBatch": 97,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 148,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:18.975Z"
+        },
+        {
+          "batch_id": 117,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1342.3,
+          "processed_rows_per_second": 1342.3,
+          "duration_ms": {
+            "addBatch": 94,
+            "commitOffsets": 23,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 9,
+            "triggerExecution": 149,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:19.124Z"
+        },
+        {
+          "batch_id": 118,
+          "num_input_rows": 100,
+          "input_rows_per_second": 666.7,
+          "processed_rows_per_second": 671.1,
+          "duration_ms": {
+            "addBatch": 93,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 9,
+            "triggerExecution": 149,
+            "walCommit": 24
+          },
+          "timestamp": "2026-11-12T18:21:19.274Z"
+        },
+        {
+          "batch_id": 119,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1333.3,
+          "processed_rows_per_second": 1379.3,
+          "duration_ms": {
+            "addBatch": 95,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 7,
+            "triggerExecution": 145,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:19.424Z"
+        },
+        {
+          "batch_id": 120,
+          "num_input_rows": 100,
+          "input_rows_per_second": 684.9,
+          "processed_rows_per_second": 746.3,
+          "duration_ms": {
+            "addBatch": 84,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 134,
+            "walCommit": 18
+          },
+          "timestamp": "2026-11-12T18:21:19.570Z"
+        },
+        {
+          "batch_id": 121,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1481.5,
+          "processed_rows_per_second": 1190.5,
+          "duration_ms": {
+            "addBatch": 119,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 168,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:19.705Z"
+        },
+        {
+          "batch_id": 122,
+          "num_input_rows": 100,
+          "input_rows_per_second": 591.7,
+          "processed_rows_per_second": 657.9,
+          "duration_ms": {
+            "addBatch": 98,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 151,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:19.874Z"
+        },
+        {
+          "batch_id": 123,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1315.8,
+          "processed_rows_per_second": 1369.9,
+          "duration_ms": {
+            "addBatch": 95,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 146,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:20.026Z"
+        },
+        {
+          "batch_id": 124,
+          "num_input_rows": 100,
+          "input_rows_per_second": 680.3,
+          "processed_rows_per_second": 694.4,
+          "duration_ms": {
+            "addBatch": 90,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 143,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:20.173Z"
+        },
+        {
+          "batch_id": 125,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1388.9,
+          "processed_rows_per_second": 1273.9,
+          "duration_ms": {
+            "addBatch": 103,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 157,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:20.317Z"
+        },
+        {
+          "batch_id": 126,
+          "num_input_rows": 100,
+          "input_rows_per_second": 636.9,
+          "processed_rows_per_second": 714.3,
+          "duration_ms": {
+            "addBatch": 86,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 11,
+            "triggerExecution": 140,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:20.474Z"
+        },
+        {
+          "batch_id": 127,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1418.4,
+          "processed_rows_per_second": 1183.4,
+          "duration_ms": {
+            "addBatch": 110,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 14,
+            "triggerExecution": 169,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:20.615Z"
+        },
+        {
+          "batch_id": 128,
+          "num_input_rows": 100,
+          "input_rows_per_second": 584.8,
+          "processed_rows_per_second": 588.2,
+          "duration_ms": {
+            "addBatch": 117,
+            "commitOffsets": 20,
+            "getBatch": 1,
+            "latestOffset": 2,
+            "queryPlanning": 10,
+            "triggerExecution": 170,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:20.786Z"
+        },
+        {
+          "batch_id": 129,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1169.6,
+          "processed_rows_per_second": 909.1,
+          "duration_ms": {
+            "addBatch": 167,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 219,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:20.957Z"
+        },
+        {
+          "batch_id": 130,
+          "num_input_rows": 200,
+          "input_rows_per_second": 909.1,
+          "processed_rows_per_second": 1369.9,
+          "duration_ms": {
+            "addBatch": 90,
+            "commitOffsets": 24,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 146,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:21.177Z"
+        },
+        {
+          "batch_id": 131,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1360.5,
+          "processed_rows_per_second": 1307.2,
+          "duration_ms": {
+            "addBatch": 97,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 9,
+            "triggerExecution": 153,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:21.324Z"
+        },
+        {
+          "batch_id": 132,
+          "num_input_rows": 100,
+          "input_rows_per_second": 649.4,
+          "processed_rows_per_second": 714.3,
+          "duration_ms": {
+            "addBatch": 86,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 9,
+            "triggerExecution": 140,
+            "walCommit": 23
+          },
+          "timestamp": "2026-11-12T18:21:21.478Z"
+        },
+        {
+          "batch_id": 133,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1428.6,
+          "processed_rows_per_second": 1298.7,
+          "duration_ms": {
+            "addBatch": 102,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 7,
+            "triggerExecution": 153,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:21.618Z"
+        },
+        {
+          "batch_id": 134,
+          "num_input_rows": 100,
+          "input_rows_per_second": 649.4,
+          "processed_rows_per_second": 606.1,
+          "duration_ms": {
+            "addBatch": 111,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 10,
+            "triggerExecution": 165,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:21.772Z"
+        },
+        {
+          "batch_id": 135,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1204.8,
+          "processed_rows_per_second": 858.4,
+          "duration_ms": {
+            "addBatch": 182,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 233,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:21.938Z"
+        },
+        {
+          "batch_id": 136,
+          "num_input_rows": 200,
+          "input_rows_per_second": 854.7,
+          "processed_rows_per_second": 1069.5,
+          "duration_ms": {
+            "addBatch": 137,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 187,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:22.172Z"
+        },
+        {
+          "batch_id": 137,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1063.8,
+          "processed_rows_per_second": 934.6,
+          "duration_ms": {
+            "addBatch": 163,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 214,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:22.360Z"
+        },
+        {
+          "batch_id": 138,
+          "num_input_rows": 200,
+          "input_rows_per_second": 930.2,
+          "processed_rows_per_second": 1470.6,
+          "duration_ms": {
+            "addBatch": 85,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 136,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:22.575Z"
+        },
+        {
+          "batch_id": 139,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1459.9,
+          "processed_rows_per_second": 1250.0,
+          "duration_ms": {
+            "addBatch": 109,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 160,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:22.712Z"
+        },
+        {
+          "batch_id": 140,
+          "num_input_rows": 100,
+          "input_rows_per_second": 621.1,
+          "processed_rows_per_second": 584.8,
+          "duration_ms": {
+            "addBatch": 103,
+            "commitOffsets": 23,
+            "getBatch": 0,
+            "latestOffset": 14,
+            "queryPlanning": 9,
+            "triggerExecution": 171,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:22.873Z"
+        },
+        {
+          "batch_id": 141,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1162.8,
+          "processed_rows_per_second": 881.1,
+          "duration_ms": {
+            "addBatch": 172,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 227,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:23.045Z"
+        },
+        {
+          "batch_id": 142,
+          "num_input_rows": 200,
+          "input_rows_per_second": 877.2,
+          "processed_rows_per_second": 1388.9,
+          "duration_ms": {
+            "addBatch": 91,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 143,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:23.273Z"
+        },
+        {
+          "batch_id": 143,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1388.9,
+          "processed_rows_per_second": 1234.6,
+          "duration_ms": {
+            "addBatch": 108,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 162,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:23.417Z"
+        },
+        {
+          "batch_id": 144,
+          "num_input_rows": 100,
+          "input_rows_per_second": 613.5,
+          "processed_rows_per_second": 757.6,
+          "duration_ms": {
+            "addBatch": 81,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 132,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:23.580Z"
+        },
+        {
+          "batch_id": 145,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1503.8,
+          "processed_rows_per_second": 1242.2,
+          "duration_ms": {
+            "addBatch": 110,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 161,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:23.713Z"
+        },
+        {
+          "batch_id": 146,
+          "num_input_rows": 100,
+          "input_rows_per_second": 617.3,
+          "processed_rows_per_second": 613.5,
+          "duration_ms": {
+            "addBatch": 110,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 163,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:23.875Z"
+        },
+        {
+          "batch_id": 147,
+          "num_input_rows": 200,
+          "input_rows_per_second": 1219.5,
+          "processed_rows_per_second": 881.1,
+          "duration_ms": {
+            "addBatch": 177,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 227,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:24.039Z"
+        },
+        {
+          "batch_id": 148,
+          "num_input_rows": 200,
+          "input_rows_per_second": 877.2,
+          "processed_rows_per_second": 1526.7,
+          "duration_ms": {
+            "addBatch": 82,
+            "commitOffsets": 20,
+            "getBatch": 1,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 131,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:24.267Z"
+        },
+        {
+          "batch_id": 149,
+          "num_input_rows": 100,
+          "input_rows_per_second": 757.6,
+          "processed_rows_per_second": 156.3,
+          "duration_ms": {
+            "addBatch": 588,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 639,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:24.399Z"
+        }
+      ]
+    },
+    {
+      "rate_target": 10000,
+      "label": "10.000 per detik",
+      "duration_sec": 15,
+      "producer_sent": 150000,
+      "producer_effective_rate": 10000.0,
+      "total_rows_processed": 150000,
+      "mean_input_rows_per_second": 10792.8,
+      "mean_processed_rows_per_second": 9886.9,
+      "is_lagging": false,
+      "tertinggal": "Tidak",
+      "catatan": "Kapasitas puncak tercapai (~8.000-10.000 rows/s); micro-batch memproses burst secara stabil",
+      "sample_batches_count": 102,
+      "batches": [
+        {
+          "batch_id": 150,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 76923.1,
+          "processed_rows_per_second": 5714.3,
+          "duration_ms": {
+            "addBatch": 124,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 175,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:30.784Z"
+        },
+        {
+          "batch_id": 151,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 5681.8,
+          "processed_rows_per_second": 6135.0,
+          "duration_ms": {
+            "addBatch": 111,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 163,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:30.960Z"
+        },
+        {
+          "batch_id": 152,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 12195.1,
+          "processed_rows_per_second": 14598.5,
+          "duration_ms": {
+            "addBatch": 85,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 136,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:31.124Z"
+        },
+        {
+          "batch_id": 153,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 7299.3,
+          "processed_rows_per_second": 6535.9,
+          "duration_ms": {
+            "addBatch": 101,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 153,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:31.261Z"
+        },
+        {
+          "batch_id": 154,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 12987.0,
+          "processed_rows_per_second": 12658.2,
+          "duration_ms": {
+            "addBatch": 98,
+            "commitOffsets": 23,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 13,
+            "triggerExecution": 158,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:31.415Z"
+        },
+        {
+          "batch_id": 155,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6289.3,
+          "processed_rows_per_second": 7407.4,
+          "duration_ms": {
+            "addBatch": 85,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 135,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:31.574Z"
+        },
+        {
+          "batch_id": 156,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 14705.9,
+          "processed_rows_per_second": 12121.2,
+          "duration_ms": {
+            "addBatch": 115,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 165,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:31.710Z"
+        },
+        {
+          "batch_id": 157,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6024.1,
+          "processed_rows_per_second": 7352.9,
+          "duration_ms": {
+            "addBatch": 84,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 136,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:31.876Z"
+        },
+        {
+          "batch_id": 158,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 14705.9,
+          "processed_rows_per_second": 13986.0,
+          "duration_ms": {
+            "addBatch": 91,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 143,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:32.012Z"
+        },
+        {
+          "batch_id": 159,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6944.4,
+          "processed_rows_per_second": 6666.7,
+          "duration_ms": {
+            "addBatch": 99,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 150,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:32.156Z"
+        },
+        {
+          "batch_id": 160,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 13245.0,
+          "processed_rows_per_second": 12500.0,
+          "duration_ms": {
+            "addBatch": 109,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 160,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:32.307Z"
+        },
+        {
+          "batch_id": 161,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6211.2,
+          "processed_rows_per_second": 6622.5,
+          "duration_ms": {
+            "addBatch": 102,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 151,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:32.468Z"
+        },
+        {
+          "batch_id": 162,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 13157.9,
+          "processed_rows_per_second": 14814.8,
+          "duration_ms": {
+            "addBatch": 84,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 134,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:32.620Z"
+        },
+        {
+          "batch_id": 163,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 7407.4,
+          "processed_rows_per_second": 6756.8,
+          "duration_ms": {
+            "addBatch": 98,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 7,
+            "triggerExecution": 148,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:32.755Z"
+        },
+        {
+          "batch_id": 164,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 13422.8,
+          "processed_rows_per_second": 13888.9,
+          "duration_ms": {
+            "addBatch": 96,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 144,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:32.904Z"
+        },
+        {
+          "batch_id": 165,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6896.6,
+          "processed_rows_per_second": 7812.5,
+          "duration_ms": {
+            "addBatch": 79,
+            "commitOffsets": 18,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 127,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:33.049Z"
+        },
+        {
+          "batch_id": 166,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 7812.5,
+          "processed_rows_per_second": 6060.6,
+          "duration_ms": {
+            "addBatch": 116,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 165,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:33.177Z"
+        },
+        {
+          "batch_id": 167,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 12048.2,
+          "processed_rows_per_second": 14388.5,
+          "duration_ms": {
+            "addBatch": 89,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 139,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:33.343Z"
+        },
+        {
+          "batch_id": 168,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 14285.7,
+          "processed_rows_per_second": 11976.0,
+          "duration_ms": {
+            "addBatch": 118,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 167,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:33.483Z"
+        },
+        {
+          "batch_id": 169,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 5952.4,
+          "processed_rows_per_second": 7518.8,
+          "duration_ms": {
+            "addBatch": 83,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 133,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:33.651Z"
+        },
+        {
+          "batch_id": 170,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 15037.6,
+          "processed_rows_per_second": 10989.0,
+          "duration_ms": {
+            "addBatch": 129,
+            "commitOffsets": 24,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 182,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:33.784Z"
+        },
+        {
+          "batch_id": 171,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 5464.5,
+          "processed_rows_per_second": 6451.6,
+          "duration_ms": {
+            "addBatch": 104,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 7,
+            "triggerExecution": 155,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:33.967Z"
+        },
+        {
+          "batch_id": 172,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 12903.2,
+          "processed_rows_per_second": 14814.8,
+          "duration_ms": {
+            "addBatch": 85,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 6,
+            "triggerExecution": 135,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:34.122Z"
+        },
+        {
+          "batch_id": 173,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 7352.9,
+          "processed_rows_per_second": 6535.9,
+          "duration_ms": {
+            "addBatch": 101,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 9,
+            "triggerExecution": 153,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:34.258Z"
+        },
+        {
+          "batch_id": 174,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 13071.9,
+          "processed_rows_per_second": 13333.3,
+          "duration_ms": {
+            "addBatch": 88,
+            "commitOffsets": 32,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 150,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:34.411Z"
+        },
+        {
+          "batch_id": 175,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6622.5,
+          "processed_rows_per_second": 6622.5,
+          "duration_ms": {
+            "addBatch": 96,
+            "commitOffsets": 23,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 7,
+            "triggerExecution": 151,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:34.562Z"
+        },
+        {
+          "batch_id": 176,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 13157.9,
+          "processed_rows_per_second": 13157.9,
+          "duration_ms": {
+            "addBatch": 98,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 152,
+            "walCommit": 23
+          },
+          "timestamp": "2026-11-12T18:21:34.714Z"
+        },
+        {
+          "batch_id": 177,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6535.9,
+          "processed_rows_per_second": 7518.8,
+          "duration_ms": {
+            "addBatch": 82,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 133,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:34.867Z"
+        },
+        {
+          "batch_id": 178,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 14925.4,
+          "processed_rows_per_second": 13513.5,
+          "duration_ms": {
+            "addBatch": 100,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 148,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:35.001Z"
+        },
+        {
+          "batch_id": 179,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6711.4,
+          "processed_rows_per_second": 7352.9,
+          "duration_ms": {
+            "addBatch": 85,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 136,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:35.150Z"
+        },
+        {
+          "batch_id": 180,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 14598.5,
+          "processed_rows_per_second": 12269.9,
+          "duration_ms": {
+            "addBatch": 113,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 163,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:35.287Z"
+        },
+        {
+          "batch_id": 181,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6097.6,
+          "processed_rows_per_second": 6451.6,
+          "duration_ms": {
+            "addBatch": 106,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 155,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:35.451Z"
+        },
+        {
+          "batch_id": 182,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 12820.5,
+          "processed_rows_per_second": 14084.5,
+          "duration_ms": {
+            "addBatch": 93,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 142,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:35.607Z"
+        },
+        {
+          "batch_id": 183,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 7042.3,
+          "processed_rows_per_second": 7407.4,
+          "duration_ms": {
+            "addBatch": 84,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 135,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:35.749Z"
+        },
+        {
+          "batch_id": 184,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 14705.9,
+          "processed_rows_per_second": 12269.9,
+          "duration_ms": {
+            "addBatch": 114,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 163,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:35.885Z"
+        },
+        {
+          "batch_id": 185,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6097.6,
+          "processed_rows_per_second": 7575.8,
+          "duration_ms": {
+            "addBatch": 82,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 132,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:36.049Z"
+        },
+        {
+          "batch_id": 186,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 15037.6,
+          "processed_rows_per_second": 10204.1,
+          "duration_ms": {
+            "addBatch": 132,
+            "commitOffsets": 36,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 196,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:36.182Z"
+        },
+        {
+          "batch_id": 187,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 5076.1,
+          "processed_rows_per_second": 7299.3,
+          "duration_ms": {
+            "addBatch": 86,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 137,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:36.379Z"
+        },
+        {
+          "batch_id": 188,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 14492.8,
+          "processed_rows_per_second": 14925.4,
+          "duration_ms": {
+            "addBatch": 85,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 6,
+            "triggerExecution": 134,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:36.517Z"
+        },
+        {
+          "batch_id": 189,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 7407.4,
+          "processed_rows_per_second": 6666.7,
+          "duration_ms": {
+            "addBatch": 89,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 150,
+            "walCommit": 32
+          },
+          "timestamp": "2026-11-12T18:21:36.652Z"
+        },
+        {
+          "batch_id": 190,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 13245.0,
+          "processed_rows_per_second": 13698.6,
+          "duration_ms": {
+            "addBatch": 94,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 145,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:36.803Z"
+        },
+        {
+          "batch_id": 191,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6849.3,
+          "processed_rows_per_second": 5618.0,
+          "duration_ms": {
+            "addBatch": 115,
+            "commitOffsets": 32,
+            "getBatch": 1,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 178,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:36.949Z"
+        },
+        {
+          "batch_id": 192,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 11173.2,
+          "processed_rows_per_second": 13888.9,
+          "duration_ms": {
+            "addBatch": 92,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 144,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:37.128Z"
+        },
+        {
+          "batch_id": 193,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6944.4,
+          "processed_rows_per_second": 7352.9,
+          "duration_ms": {
+            "addBatch": 84,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 9,
+            "triggerExecution": 136,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:37.272Z"
+        },
+        {
+          "batch_id": 194,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 14598.5,
+          "processed_rows_per_second": 13793.1,
+          "duration_ms": {
+            "addBatch": 96,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 145,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:37.409Z"
+        },
+        {
+          "batch_id": 195,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6849.3,
+          "processed_rows_per_second": 7407.4,
+          "duration_ms": {
+            "addBatch": 82,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 135,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:37.555Z"
+        },
+        {
+          "batch_id": 196,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 14705.9,
+          "processed_rows_per_second": 12820.5,
+          "duration_ms": {
+            "addBatch": 107,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 156,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:37.691Z"
+        },
+        {
+          "batch_id": 197,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6369.4,
+          "processed_rows_per_second": 7142.9,
+          "duration_ms": {
+            "addBatch": 79,
+            "commitOffsets": 31,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 139,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:37.848Z"
+        },
+        {
+          "batch_id": 198,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 14285.7,
+          "processed_rows_per_second": 12422.4,
+          "duration_ms": {
+            "addBatch": 108,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 161,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:37.988Z"
+        },
+        {
+          "batch_id": 199,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6172.8,
+          "processed_rows_per_second": 7407.4,
+          "duration_ms": {
+            "addBatch": 85,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 135,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:38.150Z"
+        },
+        {
+          "batch_id": 200,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 14705.9,
+          "processed_rows_per_second": 11627.9,
+          "duration_ms": {
+            "addBatch": 122,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 172,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:38.286Z"
+        },
+        {
+          "batch_id": 201,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 5780.3,
+          "processed_rows_per_second": 7042.3,
+          "duration_ms": {
+            "addBatch": 88,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 142,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:38.459Z"
+        },
+        {
+          "batch_id": 202,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 13986.0,
+          "processed_rows_per_second": 13888.9,
+          "duration_ms": {
+            "addBatch": 96,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 144,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:38.602Z"
+        },
+        {
+          "batch_id": 203,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6944.4,
+          "processed_rows_per_second": 7194.2,
+          "duration_ms": {
+            "addBatch": 89,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 139,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:38.746Z"
+        },
+        {
+          "batch_id": 204,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 14285.7,
+          "processed_rows_per_second": 12422.4,
+          "duration_ms": {
+            "addBatch": 113,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 161,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:38.886Z"
+        },
+        {
+          "batch_id": 205,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6172.8,
+          "processed_rows_per_second": 7633.6,
+          "duration_ms": {
+            "addBatch": 80,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 6,
+            "triggerExecution": 131,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:39.048Z"
+        },
+        {
+          "batch_id": 206,
+          "num_input_rows": 1650,
+          "input_rows_per_second": 12500.0,
+          "processed_rows_per_second": 9821.4,
+          "duration_ms": {
+            "addBatch": 118,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 167,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:39.180Z"
+        },
+        {
+          "batch_id": 207,
+          "num_input_rows": 1350,
+          "input_rows_per_second": 8035.7,
+          "processed_rows_per_second": 8709.7,
+          "duration_ms": {
+            "addBatch": 101,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 7,
+            "triggerExecution": 155,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:39.348Z"
+        },
+        {
+          "batch_id": 208,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 12820.5,
+          "processed_rows_per_second": 13888.9,
+          "duration_ms": {
+            "addBatch": 89,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 144,
+            "walCommit": 23
+          },
+          "timestamp": "2026-11-12T18:21:39.504Z"
+        },
+        {
+          "batch_id": 209,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6896.6,
+          "processed_rows_per_second": 7518.8,
+          "duration_ms": {
+            "addBatch": 82,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 7,
+            "triggerExecution": 133,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:39.649Z"
+        },
+        {
+          "batch_id": 210,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 14925.4,
+          "processed_rows_per_second": 11834.3,
+          "duration_ms": {
+            "addBatch": 118,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 169,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:39.783Z"
+        },
+        {
+          "batch_id": 211,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 5882.4,
+          "processed_rows_per_second": 6993.0,
+          "duration_ms": {
+            "addBatch": 85,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 143,
+            "walCommit": 27
+          },
+          "timestamp": "2026-11-12T18:21:39.953Z"
+        },
+        {
+          "batch_id": 212,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 13888.9,
+          "processed_rows_per_second": 12987.0,
+          "duration_ms": {
+            "addBatch": 105,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 154,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:40.097Z"
+        },
+        {
+          "batch_id": 213,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6451.6,
+          "processed_rows_per_second": 6993.0,
+          "duration_ms": {
+            "addBatch": 93,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 7,
+            "triggerExecution": 143,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:40.252Z"
+        },
+        {
+          "batch_id": 214,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 13888.9,
+          "processed_rows_per_second": 12269.9,
+          "duration_ms": {
+            "addBatch": 111,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 163,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:40.396Z"
+        },
+        {
+          "batch_id": 215,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6097.6,
+          "processed_rows_per_second": 7246.4,
+          "duration_ms": {
+            "addBatch": 85,
+            "commitOffsets": 21,
+            "getBatch": 1,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 138,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:40.560Z"
+        },
+        {
+          "batch_id": 216,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 14388.5,
+          "processed_rows_per_second": 12738.9,
+          "duration_ms": {
+            "addBatch": 104,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 157,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:40.699Z"
+        },
+        {
+          "batch_id": 217,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6329.1,
+          "processed_rows_per_second": 7692.3,
+          "duration_ms": {
+            "addBatch": 79,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 129,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:40.857Z"
+        },
+        {
+          "batch_id": 218,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 15384.6,
+          "processed_rows_per_second": 12500.0,
+          "duration_ms": {
+            "addBatch": 112,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 160,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:40.987Z"
+        },
+        {
+          "batch_id": 219,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6211.2,
+          "processed_rows_per_second": 7751.9,
+          "duration_ms": {
+            "addBatch": 80,
+            "commitOffsets": 20,
+            "getBatch": 1,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 128,
+            "walCommit": 18
+          },
+          "timestamp": "2026-11-12T18:21:41.148Z"
+        },
+        {
+          "batch_id": 220,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 7751.9,
+          "processed_rows_per_second": 6666.7,
+          "duration_ms": {
+            "addBatch": 93,
+            "commitOffsets": 29,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 6,
+            "triggerExecution": 150,
+            "walCommit": 18
+          },
+          "timestamp": "2026-11-12T18:21:41.277Z"
+        },
+        {
+          "batch_id": 221,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 13333.3,
+          "processed_rows_per_second": 13333.3,
+          "duration_ms": {
+            "addBatch": 94,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 9,
+            "triggerExecution": 150,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:41.427Z"
+        },
+        {
+          "batch_id": 222,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6622.5,
+          "processed_rows_per_second": 6666.7,
+          "duration_ms": {
+            "addBatch": 98,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 6,
+            "triggerExecution": 150,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:41.578Z"
+        },
+        {
+          "batch_id": 223,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 13245.0,
+          "processed_rows_per_second": 15037.6,
+          "duration_ms": {
+            "addBatch": 83,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 6,
+            "triggerExecution": 133,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:41.729Z"
+        },
+        {
+          "batch_id": 224,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 7462.7,
+          "processed_rows_per_second": 7751.9,
+          "duration_ms": {
+            "addBatch": 75,
+            "commitOffsets": 24,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 6,
+            "triggerExecution": 129,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:41.863Z"
+        },
+        {
+          "batch_id": 225,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 15503.9,
+          "processed_rows_per_second": 12738.9,
+          "duration_ms": {
+            "addBatch": 108,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 7,
+            "triggerExecution": 157,
+            "walCommit": 18
+          },
+          "timestamp": "2026-11-12T18:21:41.992Z"
+        },
+        {
+          "batch_id": 226,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6329.1,
+          "processed_rows_per_second": 7633.6,
+          "duration_ms": {
+            "addBatch": 77,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 7,
+            "triggerExecution": 131,
+            "walCommit": 23
+          },
+          "timestamp": "2026-11-12T18:21:42.150Z"
+        },
+        {
+          "batch_id": 227,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 15151.5,
+          "processed_rows_per_second": 11904.8,
+          "duration_ms": {
+            "addBatch": 120,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 168,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:42.282Z"
+        },
+        {
+          "batch_id": 228,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 5917.2,
+          "processed_rows_per_second": 6451.6,
+          "duration_ms": {
+            "addBatch": 103,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 155,
+            "walCommit": 22
+          },
+          "timestamp": "2026-11-12T18:21:42.451Z"
+        },
+        {
+          "batch_id": 229,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 12903.2,
+          "processed_rows_per_second": 14598.5,
+          "duration_ms": {
+            "addBatch": 87,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 7,
+            "triggerExecution": 137,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:42.606Z"
+        },
+        {
+          "batch_id": 230,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 7246.4,
+          "processed_rows_per_second": 7936.5,
+          "duration_ms": {
+            "addBatch": 79,
+            "commitOffsets": 20,
+            "getBatch": 1,
+            "latestOffset": 2,
+            "queryPlanning": 6,
+            "triggerExecution": 126,
+            "walCommit": 18
+          },
+          "timestamp": "2026-11-12T18:21:42.744Z"
+        },
+        {
+          "batch_id": 231,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 7874.0,
+          "processed_rows_per_second": 6896.6,
+          "duration_ms": {
+            "addBatch": 89,
+            "commitOffsets": 21,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 6,
+            "triggerExecution": 145,
+            "walCommit": 26
+          },
+          "timestamp": "2026-11-12T18:21:42.871Z"
+        },
+        {
+          "batch_id": 232,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 13698.6,
+          "processed_rows_per_second": 14388.5,
+          "duration_ms": {
+            "addBatch": 87,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 8,
+            "triggerExecution": 139,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:43.017Z"
+        },
+        {
+          "batch_id": 233,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 7142.9,
+          "processed_rows_per_second": 7194.2,
+          "duration_ms": {
+            "addBatch": 87,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 139,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:43.157Z"
+        },
+        {
+          "batch_id": 234,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 14285.7,
+          "processed_rows_per_second": 12903.2,
+          "duration_ms": {
+            "addBatch": 107,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 6,
+            "triggerExecution": 155,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:43.297Z"
+        },
+        {
+          "batch_id": 235,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6451.6,
+          "processed_rows_per_second": 7812.5,
+          "duration_ms": {
+            "addBatch": 79,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 128,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:43.452Z"
+        },
+        {
+          "batch_id": 236,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 15503.9,
+          "processed_rows_per_second": 12195.1,
+          "duration_ms": {
+            "addBatch": 117,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 164,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:43.581Z"
+        },
+        {
+          "batch_id": 237,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6060.6,
+          "processed_rows_per_second": 7518.8,
+          "duration_ms": {
+            "addBatch": 85,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 133,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:43.746Z"
+        },
+        {
+          "batch_id": 238,
+          "num_input_rows": 1650,
+          "input_rows_per_second": 12313.4,
+          "processed_rows_per_second": 9939.8,
+          "duration_ms": {
+            "addBatch": 117,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 6,
+            "triggerExecution": 166,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:43.880Z"
+        },
+        {
+          "batch_id": 239,
+          "num_input_rows": 1350,
+          "input_rows_per_second": 8083.8,
+          "processed_rows_per_second": 10714.3,
+          "duration_ms": {
+            "addBatch": 77,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 126,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:44.047Z"
+        },
+        {
+          "batch_id": 240,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 7874.0,
+          "processed_rows_per_second": 7142.9,
+          "duration_ms": {
+            "addBatch": 92,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 6,
+            "triggerExecution": 140,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:44.174Z"
+        },
+        {
+          "batch_id": 241,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 14184.4,
+          "processed_rows_per_second": 14814.8,
+          "duration_ms": {
+            "addBatch": 86,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 135,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:44.315Z"
+        },
+        {
+          "batch_id": 242,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 7352.9,
+          "processed_rows_per_second": 7812.5,
+          "duration_ms": {
+            "addBatch": 79,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 6,
+            "triggerExecution": 128,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:44.451Z"
+        },
+        {
+          "batch_id": 243,
+          "num_input_rows": 1316,
+          "input_rows_per_second": 10201.6,
+          "processed_rows_per_second": 8024.4,
+          "duration_ms": {
+            "addBatch": 117,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 164,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:44.580Z"
+        },
+        {
+          "batch_id": 244,
+          "num_input_rows": 1684,
+          "input_rows_per_second": 10206.1,
+          "processed_rows_per_second": 13054.3,
+          "duration_ms": {
+            "addBatch": 80,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 6,
+            "triggerExecution": 129,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:44.745Z"
+        },
+        {
+          "batch_id": 245,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 7751.9,
+          "processed_rows_per_second": 7874.0,
+          "duration_ms": {
+            "addBatch": 78,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 6,
+            "triggerExecution": 127,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:44.874Z"
+        },
+        {
+          "batch_id": 246,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 15625.0,
+          "processed_rows_per_second": 12987.0,
+          "duration_ms": {
+            "addBatch": 107,
+            "commitOffsets": 19,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 154,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:45.002Z"
+        },
+        {
+          "batch_id": 247,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6451.6,
+          "processed_rows_per_second": 7751.9,
+          "duration_ms": {
+            "addBatch": 80,
+            "commitOffsets": 20,
+            "getBatch": 1,
+            "latestOffset": 2,
+            "queryPlanning": 6,
+            "triggerExecution": 128,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:45.157Z"
+        },
+        {
+          "batch_id": 248,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 15503.9,
+          "processed_rows_per_second": 11976.0,
+          "duration_ms": {
+            "addBatch": 119,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 6,
+            "triggerExecution": 167,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:45.286Z"
+        },
+        {
+          "batch_id": 249,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 5988.0,
+          "processed_rows_per_second": 7194.2,
+          "duration_ms": {
+            "addBatch": 88,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 7,
+            "triggerExecution": 138,
+            "walCommit": 20
+          },
+          "timestamp": "2026-11-12T18:21:45.453Z"
+        },
+        {
+          "batch_id": 250,
+          "num_input_rows": 2000,
+          "input_rows_per_second": 14388.5,
+          "processed_rows_per_second": 12738.9,
+          "duration_ms": {
+            "addBatch": 108,
+            "commitOffsets": 20,
+            "getBatch": 0,
+            "latestOffset": 3,
+            "queryPlanning": 6,
+            "triggerExecution": 157,
+            "walCommit": 19
+          },
+          "timestamp": "2026-11-12T18:21:45.592Z"
+        },
+        {
+          "batch_id": 251,
+          "num_input_rows": 1000,
+          "input_rows_per_second": 6329.1,
+          "processed_rows_per_second": 1545.6,
+          "duration_ms": {
+            "addBatch": 593,
+            "commitOffsets": 22,
+            "getBatch": 0,
+            "latestOffset": 2,
+            "queryPlanning": 8,
+            "triggerExecution": 647,
+            "walCommit": 21
+          },
+          "timestamp": "2026-11-12T18:21:45.750Z"
+        }
+      ]
+    }
+  ],
+  "bottleneck_analysis": {
+    "kafka_partition_limit": "3 partitions limits reading parallelism to 3 tasks",
+    "micro_batch_scheduling_latency_ms": "~150-250ms fixed overhead per trigger",
+    "scaling_recommendations": [
+      "Increase Kafka partitions (e.g., 12 or 24)",
+      "Scale spark.sql.shuffle.partitions proportionally",
+      "Enable RocksDB state store provider for off-heap state management",
+      "Configure maxOffsetsPerTrigger for bounded backpressure control"
+    ]
+  }
+}

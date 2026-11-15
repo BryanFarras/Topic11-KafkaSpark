@@ -1,0 +1,347 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" style="background-color: #0f172a; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="streamCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="kafkaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#312e81" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="sparkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#831843" />
+      <stop offset="100%" stop-color="#500724" />
+    </linearGradient>
+    <linearGradient id="storageGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#022c22" />
+    </linearGradient>
+    <linearGradient id="servingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#701a75" />
+      <stop offset="100%" stop-color="#4a044e" />
+    </linearGradient>
+
+    <!-- Markers -->
+    <marker id="arrowStream" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arrowBatch" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#f59e0b" />
+    </marker>
+    <marker id="arrowCheckpoint" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#a855f7" />
+    </marker>
+
+    <!-- Drop Shadows -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Title & Header -->
+  <rect x="20" y="20" width="1160" height="70" rx="10" fill="url(#headerGrad)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="45" y="52" fill="#f8fafc" font-size="20" font-weight="700">DIAGRAM ARSITEKTUR v0.3 — END-TO-END BIG DATA PIPELINE</text>
+  <text x="45" y="74" fill="#94a3b8" font-size="13">Kasus: Sistem Pemantauan Titik Api (Hotspot) Kebakaran Hutan Indonesia (NASA FIRMS VIIRS) · Kelompok 6</text>
+
+  <!-- Legend -->
+  <g transform="translate(820, 36)">
+    <rect x="0" y="0" width="340" height="42" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <!-- Stream Legend -->
+    <line x1="15" y1="21" x2="45" y2="21" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrowStream)"/>
+    <text x="55" y="25" fill="#e2e8f0" font-size="11" font-weight="600">Aliran Streaming (Real-Time)</text>
+    <!-- Batch Legend -->
+    <line x1="205" y1="21" x2="235" y2="21" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrowBatch)"/>
+    <text x="245" y="25" fill="#e2e8f0" font-size="11" font-weight="600">Aliran Batch</text>
+  </g>
+
+  <!-- ==================== LAYER 1: DATA SOURCES ==================== -->
+  <g transform="translate(20, 110)">
+    <rect x="0" y="0" width="190" height="550" rx="10" fill="url(#streamCardGrad)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="20" y="32" fill="#38bdf8" font-size="13" font-weight="700">1. DATA SOURCES</text>
+    <line x1="20" y1="42" x2="170" y2="42" stroke="#334155" stroke-width="1"/>
+
+    <!-- Source A: VIIRS NASA FIRMS Stream -->
+    <g transform="translate(15, 60)">
+      <rect x="0" y="0" width="160" height="120" rx="8" fill="#1e293b" stroke="#0284c7" stroke-width="1.5"/>
+      <text x="12" y="22" fill="#bae6fd" font-size="11" font-weight="700">NASA FIRMS VIIRS</text>
+      <text x="12" y="38" fill="#94a3b8" font-size="9.5">Satelit Suomi-NPP / NOAA</text>
+      <text x="12" y="54" fill="#94a3b8" font-size="9.5">Deteksi Titik Panas NRT</text>
+      <rect x="12" y="65" width="136" height="20" rx="4" fill="#0369a1"/>
+      <text x="18" y="79" fill="#ffffff" font-size="9" font-weight="600">Latency: 1-5 Menit</text>
+      <text x="12" y="104" fill="#38bdf8" font-size="9" font-weight="600">[STREAM INGESTION]</text>
+    </g>
+
+    <!-- Source B: User Clickstream / Telemetry -->
+    <g transform="translate(15, 200)">
+      <rect x="0" y="0" width="160" height="120" rx="8" fill="#1e293b" stroke="#0284c7" stroke-width="1.5"/>
+      <text x="12" y="22" fill="#bae6fd" font-size="11" font-weight="700">Web App &amp; Telemetri</text>
+      <text x="12" y="38" fill="#94a3b8" font-size="9.5">Topic 11 Clickstream</text>
+      <text x="12" y="54" fill="#94a3b8" font-size="9.5">Event Klik &amp; Langganan</text>
+      <rect x="12" y="65" width="136" height="20" rx="4" fill="#0369a1"/>
+      <text x="18" y="79" fill="#ffffff" font-size="9" font-weight="600">JSON (user_id, kategori)</text>
+      <text x="12" y="104" fill="#38bdf8" font-size="9" font-weight="600">[STREAM INGESTION]</text>
+    </g>
+
+    <!-- Source C: Historical Peatland & Weather Batch -->
+    <g transform="translate(15, 340)">
+      <rect x="0" y="0" width="160" height="175" rx="8" fill="#1e293b" stroke="#d97706" stroke-width="1.5"/>
+      <text x="12" y="22" fill="#fde68a" font-size="11" font-weight="700">Data Historis &amp; Geografis</text>
+      <text x="12" y="38" fill="#94a3b8" font-size="9.5">• Peta Lahan Gambut KLHK</text>
+      <text x="12" y="54" fill="#94a3b8" font-size="9.5">• 239 Grid Provinsi (CSV)</text>
+      <text x="12" y="70" fill="#94a3b8" font-size="9.5">• Arsip VIIRS 10k/100k</text>
+      <text x="12" y="86" fill="#94a3b8" font-size="9.5">• Data Cuaca BMKG Harian</text>
+      <rect x="12" y="100" width="136" height="20" rx="4" fill="#b45309"/>
+      <text x="18" y="114" fill="#ffffff" font-size="9" font-weight="600">Latency: 24 Jam (Batch)</text>
+      <text x="12" y="140" fill="#fbbf24" font-size="9" font-weight="600">[BATCH INGESTION]</text>
+    </g>
+  </g>
+
+  <!-- ==================== LAYER 2: INGESTION (KAFKA) ==================== -->
+  <g transform="translate(235, 110)">
+    <rect x="0" y="0" width="220" height="550" rx="10" fill="url(#kafkaGrad)" stroke="#4f46e5" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="20" y="32" fill="#a5b4fc" font-size="13" font-weight="700">2. INGESTION (KAFKA)</text>
+    <line x1="20" y1="42" x2="200" y2="42" stroke="#4f46e5" stroke-width="1"/>
+
+    <!-- Ingestion Dispatcher / Producer -->
+    <g transform="translate(15, 60)">
+      <rect x="0" y="0" width="190" height="90" rx="8" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.5"/>
+      <text x="12" y="22" fill="#c7d2fe" font-size="11" font-weight="700">Python Producer</text>
+      <text x="12" y="38" fill="#94a3b8" font-size="9.5">producer.py (Laju 100-10k)</text>
+      <text x="12" y="54" fill="#94a3b8" font-size="9.5">Key: UTF-8 str(user_id)</text>
+      <text x="12" y="72" fill="#38bdf8" font-size="9" font-weight="600">Deterministic Partitioning</text>
+    </g>
+
+    <!-- Kafka KRaft Broker Container -->
+    <g transform="translate(15, 175)">
+      <rect x="0" y="0" width="190" height="340" rx="8" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.5"/>
+      <text x="12" y="24" fill="#c7d2fe" font-size="11" font-weight="700">Kafka Broker 4.3.1 (KRaft)</text>
+      <text x="12" y="40" fill="#818cf8" font-size="9.5">Docker Container :9092</text>
+      <text x="12" y="56" fill="#94a3b8" font-size="9">ZooKeeper-Free Architecture</text>
+
+      <!-- Topic klik Box -->
+      <g transform="translate(10, 70)">
+        <rect x="0" y="0" width="170" height="185" rx="6" fill="#312e81" stroke="#818cf8" stroke-width="1.2"/>
+        <text x="10" y="20" fill="#ffffff" font-size="10.5" font-weight="700">Topic: "klik" (Hotspot Stream)</text>
+        <text x="10" y="35" fill="#a5b4fc" font-size="8.5">Retention: 168 Jam (7 Hari)</text>
+
+        <!-- Partition 0 -->
+        <g transform="translate(10, 48)">
+          <rect x="0" y="0" width="150" height="36" rx="4" fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/>
+          <text x="8" y="16" fill="#c7d2fe" font-size="9" font-weight="700">Partisi 0 (Offset Log)</text>
+          <text x="8" y="29" fill="#94a3b8" font-size="8">Hash(key) % 3 == 0</text>
+        </g>
+
+        <!-- Partition 1 -->
+        <g transform="translate(10, 92)">
+          <rect x="0" y="0" width="150" height="36" rx="4" fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/>
+          <text x="8" y="16" fill="#c7d2fe" font-size="9" font-weight="700">Partisi 1 (Offset Log)</text>
+          <text x="8" y="29" fill="#94a3b8" font-size="8">Hash(key) % 3 == 1</text>
+        </g>
+
+        <!-- Partition 2 -->
+        <g transform="translate(10, 136)">
+          <rect x="0" y="0" width="150" height="36" rx="4" fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/>
+          <text x="8" y="16" fill="#c7d2fe" font-size="9" font-weight="700">Partisi 2 (Offset Log)</text>
+          <text x="8" y="29" fill="#94a3b8" font-size="8">Hash(key) % 3 == 2</text>
+        </g>
+      </g>
+
+      <text x="14" y="280" fill="#a5b4fc" font-size="9" font-weight="600">Durabilitas Tinggi &amp; Replay</text>
+      <text x="14" y="295" fill="#94a3b8" font-size="8.5">• Menampung backlog saat crash</text>
+      <text x="14" y="310" fill="#94a3b8" font-size="8.5">• Zero data loss terverifikasi M3</text>
+    </g>
+  </g>
+
+  <!-- ==================== LAYER 3: PROCESSING ==================== -->
+  <g transform="translate(480, 110)">
+    <rect x="0" y="0" width="240" height="550" rx="10" fill="url(#sparkGrad)" stroke="#db2777" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="20" y="32" fill="#fbcfe8" font-size="13" font-weight="700">3. PROCESSING LAYER</text>
+    <line x1="20" y1="42" x2="220" y2="42" stroke="#db2777" stroke-width="1"/>
+
+    <!-- Engine A: PySpark 4.2.0 Structured Streaming (Topic 11) -->
+    <g transform="translate(15, 60)">
+      <rect x="0" y="0" width="210" height="255" rx="8" fill="#500724" stroke="#f43f5e" stroke-width="1.5"/>
+      <text x="12" y="22" fill="#ffe4e6" font-size="11" font-weight="700">Spark Structured Streaming</text>
+      <text x="12" y="37" fill="#f43f5e" font-size="9.5">PySpark 4.2.0 (stream_job.py)</text>
+
+      <g transform="translate(10, 48)">
+        <rect x="0" y="0" width="190" height="30" rx="4" fill="#831843"/>
+        <text x="8" y="19" fill="#ffffff" font-size="8.5" font-weight="600">1. Deserialisasi JSON &amp; Cast Timestamp</text>
+      </g>
+
+      <g transform="translate(10, 85)">
+        <rect x="0" y="0" width="190" height="30" rx="4" fill="#831843"/>
+        <text x="8" y="19" fill="#ffffff" font-size="8.5" font-weight="600">2. Watermark: waktu, 2 Minutes</text>
+      </g>
+
+      <g transform="translate(10, 122)">
+        <rect x="0" y="0" width="190" height="30" rx="4" fill="#831843"/>
+        <text x="8" y="19" fill="#ffffff" font-size="8.5" font-weight="600">3. Window: 1 Minute Tumbling</text>
+      </g>
+
+      <g transform="translate(10, 159)">
+        <rect x="0" y="0" width="190" height="30" rx="4" fill="#831843"/>
+        <text x="8" y="19" fill="#ffffff" font-size="8.5" font-weight="600">4. Group By window, kategori</text>
+      </g>
+
+      <!-- Dual Sink Modes inside Spark -->
+      <g transform="translate(10, 198)">
+        <rect x="0" y="0" width="88" height="42" rx="4" fill="#1e1b4b" stroke="#38bdf8" stroke-width="1"/>
+        <text x="6" y="16" fill="#38bdf8" font-size="8.5" font-weight="700">Console Sink</text>
+        <text x="6" y="30" fill="#94a3b8" font-size="7.5">Mode: "update"</text>
+      </g>
+      <g transform="translate(102, 198)">
+        <rect x="0" y="0" width="98" height="42" rx="4" fill="#022c22" stroke="#10b981" stroke-width="1"/>
+        <text x="6" y="16" fill="#34d399" font-size="8.5" font-weight="700">Parquet Sink</text>
+        <text x="6" y="30" fill="#94a3b8" font-size="7.5">Mode: "append"</text>
+      </g>
+    </g>
+
+    <!-- Engine B: Spark SQL & Hive Batch (Topic 10) -->
+    <g transform="translate(15, 335)">
+      <rect x="0" y="0" width="210" height="195" rx="8" fill="#500724" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="12" y="22" fill="#fef3c7" font-size="11" font-weight="700">Batch Processing (Topic 10)</text>
+      <text x="12" y="37" fill="#f59e0b" font-size="9.5">Spark SQL 4.2.0 &amp; Hive 4.2.1</text>
+      <text x="12" y="55" fill="#94a3b8" font-size="9">• Broadcast Join 239 Grid Provinsi</text>
+      <text x="12" y="70" fill="#94a3b8" font-size="9">• Partition Pruning (acq_date)</text>
+      <text x="12" y="85" fill="#94a3b8" font-size="9">• Agregasi Harian &amp; Analitik FRP</text>
+      <text x="12" y="100" fill="#94a3b8" font-size="9">• Apache Pig 0.18.0 ETL Pipeline</text>
+
+      <rect x="12" y="115" width="186" height="60" rx="4" fill="#1e293b" stroke="#f59e0b" stroke-width="1"/>
+      <text x="18" y="132" fill="#fbbf24" font-size="9" font-weight="700">Katalog Metastore:</text>
+      <text x="18" y="148" fill="#e2e8f0" font-size="8">Apache Hive Metastore (Tez)</text>
+      <text x="18" y="162" fill="#94a3b8" font-size="8">Melayani query JDBC/ODBC analitis</text>
+    </g>
+  </g>
+
+  <!-- ==================== LAYER 4: STORAGE ==================== -->
+  <g transform="translate(745, 110)">
+    <rect x="0" y="0" width="210" height="550" rx="10" fill="url(#storageGrad)" stroke="#059669" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="20" y="32" fill="#a7f3d0" font-size="13" font-weight="700">4. STORAGE LAYER</text>
+    <line x1="20" y1="42" x2="190" y2="42" stroke="#059669" stroke-width="1"/>
+
+    <!-- Parquet Sink Dataset -->
+    <g transform="translate(15, 60)">
+      <rect x="0" y="0" width="180" height="110" rx="8" fill="#022c22" stroke="#10b981" stroke-width="1.5"/>
+      <text x="12" y="22" fill="#6ee7b7" font-size="11" font-weight="700">Parquet Data Lake</text>
+      <text x="12" y="38" fill="#34d399" font-size="9.5">hasil/klik_per_menit/</text>
+      <text x="12" y="54" fill="#94a3b8" font-size="9">Snappy Compressed Parquet</text>
+      <text x="12" y="68" fill="#94a3b8" font-size="9">Metadata: _spark_metadata</text>
+      <text x="12" y="85" fill="#a7f3d0" font-size="9" font-weight="600">Finalized Window Aggregations</text>
+    </g>
+
+    <!-- State Store & Checkpoint chk/klik -->
+    <g transform="translate(15, 185)">
+      <rect x="0" y="0" width="180" height="135" rx="8" fill="#022c22" stroke="#a855f7" stroke-width="1.5"/>
+      <text x="12" y="22" fill="#e9d5ff" font-size="11" font-weight="700">Checkpoint (chk/klik)</text>
+      <text x="12" y="38" fill="#c084fc" font-size="9.5">Write-Ahead Log (WAL) &amp; State</text>
+      <text x="12" y="55" fill="#94a3b8" font-size="8.5">• offsets/ (Batch 0..N)</text>
+      <text x="12" y="68" fill="#94a3b8" font-size="8.5">• commits/ (Committed Batches)</text>
+      <text x="12" y="81" fill="#94a3b8" font-size="8.5">• sources/0/0 (Kafka Source Metadata)</text>
+      <text x="12" y="94" fill="#94a3b8" font-size="8.5">• state/0/(0, 1, 2)/ (State Deltas)</text>
+      <text x="12" y="118" fill="#a855f7" font-size="9" font-weight="600">Exactly-Once Recovery Guarantee</text>
+    </g>
+
+    <!-- Operational Storage HBase (Topic 9) -->
+    <g transform="translate(15, 335)">
+      <rect x="0" y="0" width="180" height="100" rx="8" fill="#022c22" stroke="#10b981" stroke-width="1.5"/>
+      <text x="12" y="22" fill="#6ee7b7" font-size="11" font-weight="700">Apache HBase 2.6.7</text>
+      <text x="12" y="38" fill="#34d399" font-size="9.5">Tabel: hotspot (Topic 9)</text>
+      <text x="12" y="53" fill="#94a3b8" font-size="8.5">Rowkey: grid#tgl_rev#jam#id</text>
+      <text x="12" y="68" fill="#94a3b8" font-size="8.5">Get titik: 0.073s | Scan: 0.967s</text>
+      <text x="12" y="86" fill="#a7f3d0" font-size="9" font-weight="600">Operational Point-Lookup</text>
+    </g>
+
+    <!-- Parquet Partitioned Warehouse (Topic 10) -->
+    <g transform="translate(15, 450)">
+      <rect x="0" y="0" width="180" height="85" rx="8" fill="#022c22" stroke="#10b981" stroke-width="1.5"/>
+      <text x="12" y="20" fill="#6ee7b7" font-size="10.5" font-weight="700">Parquet Warehouse (HDFS)</text>
+      <text x="12" y="36" fill="#34d399" font-size="9">hotspot_part (Topic 10)</text>
+      <text x="12" y="50" fill="#94a3b8" font-size="8.5">PARTITIONED BY (acq_date)</text>
+      <text x="12" y="68" fill="#a7f3d0" font-size="8.5" font-weight="600">Analytical Archive (10k/100k)</text>
+    </g>
+  </g>
+
+  <!-- ==================== LAYER 5: SERVING & APPLICATION ==================== -->
+  <g transform="translate(980, 110)">
+    <rect x="0" y="0" width="200" height="550" rx="10" fill="url(#servingGrad)" stroke="#a21caf" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="20" y="32" fill="#f5d0fe" font-size="13" font-weight="700">5. SERVING &amp; UI</text>
+    <line x1="20" y1="42" x2="180" y2="42" stroke="#a21caf" stroke-width="1"/>
+
+    <!-- Serving A: Early Warning & Live Notification Engine -->
+    <g transform="translate(15, 60)">
+      <rect x="0" y="0" width="170" height="120" rx="8" fill="#4a044e" stroke="#e879f9" stroke-width="1.5"/>
+      <text x="12" y="22" fill="#fae8ff" font-size="11" font-weight="700">Early Warning Alerts</text>
+      <text x="12" y="38" fill="#f0abfc" font-size="9.5">Push Notification Notif</text>
+      <text x="12" y="55" fill="#94a3b8" font-size="9">• Deteksi lonjakan titik api</text>
+      <text x="12" y="70" fill="#94a3b8" font-size="9">• Alert FRP &gt;= 10 MW</text>
+      <text x="12" y="85" fill="#94a3b8" font-size="9">• Window-based anomaly</text>
+      <text x="12" y="104" fill="#e879f9" font-size="9" font-weight="600">Driven by Spark Stream</text>
+    </g>
+
+    <!-- Serving B: REST API & GIS Web Server -->
+    <g transform="translate(15, 205)">
+      <rect x="0" y="0" width="170" height="145" rx="8" fill="#4a044e" stroke="#e879f9" stroke-width="1.5"/>
+      <text x="12" y="22" fill="#fae8ff" font-size="11" font-weight="700">FastAPI GIS Backend</text>
+      <text x="12" y="38" fill="#f0abfc" font-size="9.5">REST API Services</text>
+      <text x="12" y="55" fill="#94a3b8" font-size="9">• Query per Grid (HBase)</text>
+      <text x="12" y="70" fill="#94a3b8" font-size="9">• GeoJSON Titik Hotspot</text>
+      <text x="12" y="85" fill="#94a3b8" font-size="9">• Stream aggregation API</text>
+      <text x="12" y="100" fill="#94a3b8" font-size="9">• Latensi sub-detik</text>
+      <rect x="12" y="112" width="146" height="20" rx="4" fill="#86198f"/>
+      <text x="18" y="126" fill="#ffffff" font-size="8.5" font-weight="600">GeoServer / Map API</text>
+    </g>
+
+    <!-- Serving C: BI & Operational Dashboard -->
+    <g transform="translate(15, 375)">
+      <rect x="0" y="0" width="170" height="150" rx="8" fill="#4a044e" stroke="#e879f9" stroke-width="1.5"/>
+      <text x="12" y="22" fill="#fae8ff" font-size="11" font-weight="700">Dashboard Interaktif</text>
+      <text x="12" y="38" fill="#f0abfc" font-size="9.5">Streamlit / Superset</text>
+      <text x="12" y="55" fill="#94a3b8" font-size="9">• Peta Sebaran Panas</text>
+      <text x="12" y="70" fill="#94a3b8" font-size="9">• Tren Hotspot Mingguan</text>
+      <text x="12" y="85" fill="#94a3b8" font-size="9">• Top 10 Provinsi Rawan</text>
+      <text x="12" y="100" fill="#94a3b8" font-size="9">• Monitoring Klik Real-Time</text>
+      <rect x="12" y="115" width="146" height="22" rx="4" fill="#86198f"/>
+      <text x="22" y="130" fill="#ffffff" font-size="8.5" font-weight="600">BMKG &amp; KLHK Command</text>
+    </g>
+  </g>
+
+  <!-- ==================== FLOW ARROWS & DATA PATHS ==================== -->
+  <!-- Stream 1: VIIRS Source -> Python Producer -->
+  <path d="M 175 230 L 250 215" fill="none" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrowStream)"/>
+
+  <!-- Stream 2: Producer -> Kafka Broker Topic klik -->
+  <path d="M 345 260 L 345 345" fill="none" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrowStream)"/>
+
+  <!-- Stream 3: Kafka Topic klik Partitions -> PySpark Structured Streaming -->
+  <path d="M 435 380 C 460 380, 460 250, 495 250" fill="none" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrowStream)"/>
+
+  <!-- Stream 4: PySpark Streaming -> Parquet Sink -->
+  <path d="M 705 280 C 725 280, 725 210, 760 210" fill="none" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrowStream)"/>
+
+  <!-- Stream 4b: PySpark Streaming State -> Checkpoint chk/klik (Bi-directional) -->
+  <path d="M 705 325 C 725 325, 735 340, 760 340" fill="none" stroke="#a855f7" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arrowCheckpoint)"/>
+
+  <!-- Stream 5: PySpark Streaming -> Early Warning Alert -->
+  <path d="M 705 200 C 730 180, 940 180, 995 180" fill="none" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrowStream)"/>
+
+  <!-- Batch 1: Historical Data Source -> Topic 10 Batch Processing (Spark SQL / Hive) -->
+  <path d="M 175 530 C 350 530, 350 530, 495 530" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrowBatch)"/>
+
+  <!-- Batch 2: Batch Processing -> Parquet Warehouse & HBase -->
+  <path d="M 705 470 C 725 470, 735 485, 760 485" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrowBatch)"/>
+  <path d="M 705 490 C 725 490, 735 420, 760 420" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrowBatch)"/>
+
+  <!-- Serving 1: Parquet & HBase -> REST API & Dashboard -->
+  <path d="M 940 210 C 960 210, 960 270, 995 270" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowStream)"/>
+  <path d="M 940 420 C 960 420, 960 340, 995 340" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowStream)"/>
+  <path d="M 940 500 C 960 500, 960 470, 995 470" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrowBatch)"/>
+
+  <!-- Footer Caption -->
+  <text x="30" y="680" fill="#64748b" font-size="11">Diagram Arsitektur v0.3: Mengintegrasikan Sumber Data, Ingestion Kafka (KRaft), Processing (Spark Streaming &amp; Spark SQL/Hive), Storage (Parquet, Checkpoint WAL, HBase), dan Serving (Alerts, API, BI).</text>
+</svg>

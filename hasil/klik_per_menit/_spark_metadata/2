@@ -1,0 +1,4 @@
+v1
+{"path":"file:///mnt/c/Users/asus/Documents/BigData/Topic11-KafkaSpark/hasil/klik_per_menit/part-00000-cff7f29e-9f14-4e10-a59d-75c4bfd4f24a-c000.snappy.parquet","size":1478,"isDir":false,"modificationTime":1794507605466,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///mnt/c/Users/asus/Documents/BigData/Topic11-KafkaSpark/hasil/klik_per_menit/part-00001-c532bb1e-ba4d-4ff8-8e50-f111ec3309ec-c000.snappy.parquet","size":1496,"isDir":false,"modificationTime":1794507605466,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///mnt/c/Users/asus/Documents/BigData/Topic11-KafkaSpark/hasil/klik_per_menit/part-00002-767dbd4d-0998-417d-a899-9a56a17d004c-c000.snappy.parquet","size":1471,"isDir":false,"modificationTime":1794507605467,"blockReplication":1,"blockSize":33554432,"action":"add"}
